@@ -4,11 +4,11 @@ import { Field, reduxForm } from "redux-form"
 import { withRouter } from "react-router-dom"
 
 class SearchBar extends Component {
-
+    
     handleFormSubmit = function({query}) {
-        console.log("handeling submit query", query)
-        this.props.history.push("/results")
+        this.props.onSubmit(query);
     }
+    
 
     renderInput(field) {
         return <input type="text" placeholder="SmartyPants" {...field.input} />
