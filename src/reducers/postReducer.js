@@ -4,15 +4,16 @@ import {
 
 const INIT_STATE = {
     post: [],
-    recentPost: []
+    recentPosts: []
 }
 
 export default function(state = INIT_STATE, action) {
     switch (action.type) {
         case SET_RECENT_POSTS:
+            const recentPosts = action.payload
+            return {...state, recentPosts}
             
-            return [...state, recentPosts, actions.payload]
         default:
-            return state
+            return state;
     }
 }
