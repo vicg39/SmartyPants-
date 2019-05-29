@@ -8,7 +8,7 @@ import RecentPost from "./recent-post"
 export default class Home extends Component {
   render() {
     return (
-      <div className='app'>
+      <div>
         <Logo />
         <SearchBar />
         <RecentPost />
