@@ -58,7 +58,7 @@ class Post extends Component {
                         {this.props.title}</a>
                     </div>
                     <Animateheight
-                        duration={500}
+                        duration={2000}
                         height={this.state.height}
                     >
                         <div className="result-post__links">
