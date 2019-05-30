@@ -63,7 +63,11 @@
     }
 
     .result-post__links {
-        // display: flex;
+        display: flex;
+        margin-bottom: 20px;
+        height: 90px;
+        flex-basis: 205px;
+        margin-right: 37px;
     }
 }
 
