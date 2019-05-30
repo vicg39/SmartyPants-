@@ -5,7 +5,7 @@
     align-content: space-around;
     justify-items: center;
     font-family: 'Lato', sans-serif;
-    grid-template-rows: 1fr 2fr 1fr;
+    // grid-template-rows: 1fr 2fr 1fr;
 }
 
 .app-wrapper {
@@ -17,5 +17,9 @@
     margin: 0 4px;
 }
 
+$color-gray-one:#666666;
+$color-gray-two: #b3b3b3;
+
+@import './searchBar.scss'
 
 

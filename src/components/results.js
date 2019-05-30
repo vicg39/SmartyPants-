@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import Logo from "./logo";
-import SearchBar from "./searchbar";
+import SearchBar from "./searchBar";
 import ResultsPost from "./results-post";
 
 
