@@ -7,54 +7,55 @@
         width: 100%;
 
         input {
-            padding-left:  35px;
+            padding-left: 35px;
             color: $color-gray-one;
-            box-shadow: 2px 3px 20px 1px rgba(0, 0, 0, 0.2);
+            box-shadow: 2px 3px 20px 1px rgba(0, 0, 0, 0.1);
             border: none;
             border-radius: 10px;
-            width: 900px;
     
-            transition: all .3s ease;
+            transition: all .2s ease;
     
             &::placeholder {
-                color: $color-gray-one;
+                color: $color-gray-two;
                 font-family: 'Font Awesome\ 5 Free', 'Lato', Arial, Helvetica, sans-serif;
                 font-weight: 600;
             }
-
     
             &:focus {
                 outline: none;
-                box-shadow: 2px 3px 20px 1px rgba(0, 0, 0, 0.4)
-            }  
+                box-shadow: 2px 3px 20px 1px rgba(0, 0, 0, 0.3);
+            }
         }
     
         p {
             text-align: right;
-            font-size: 12px;
+            font-size: 14px;
             color: $color-gray-two;
-        }       
-    }  
+        }
+    }
+
 }
 
 .search-bar__home {
     align-content: center;
-    justify-content: center;
-
+    justify-items: center;
+    
     input {
-        height: 70px;
-        font-size: 40px;
+        height: 90px;
+        font-size: 35px;
+        @media screen and (max-width: 600px) {
+            font-size: 21px;
+            height: 59px;
+        } 
     }
 }
 
 .search-bar__results {
     align-content: start;
-    justify-content: center;
-    
+    justify-items: center;
 
     input {
-        font-size: 21px;
+        font-size: 22px;
         height: 36px;
-
     }
 }
