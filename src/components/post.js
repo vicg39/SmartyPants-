@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Animateheight from "react-animate-height"
+import AnimateHeight from 'react-animate-height';
 
 class Post extends Component {
+
     constructor(props) {
         super(props)
 
@@ -41,13 +42,16 @@ class Post extends Component {
         let links = this.props.post_links.map((post_link, index) => {
             return (
                 <div className="post-link" key={index}>
-                    <div className="post-link-box"></div>
-                    <div className="post-link-link">
-                        <a href={post_link.link_url}>Useful Link #{index + 1}</a>
+                    <div className="post-link__box"></div>
+                    <div className="post-link__link">
+                        <a href={post_link.link_url}>{this.getNameForPostLink(post_link.link_url)}</a>
                     </div>
                 </div>
             )
         })
+        if(links == 0) {
+            return <div className="no-content">No Post Links</div>
+        }
         return links;
     }
 
@@ -55,14 +59,13 @@ class Post extends Component {
         if(this.props.type == 'recent') {
             return (
                 <li className="recent-post">
-                    <div className="recent-post-title">
-                        {this.props.title}  
+                    <div className="recent-post__title">
+                        <a href={this.props.url_for_post}>{this.props.title}</a>
                     </div>
-                        
-                    <div className="recent-post-topics">
+                    <div className="recent-post__topics">
                         {this.renderTopics()}
                     </div>
-                </li> 
+                </li>
             )
         } else if(this.props.type == 'result') {
             return (
@@ -78,19 +81,19 @@ class Post extends Component {
                         {this.props.title}
                         </a>
                     </div>
-                    <Animateheight
+                    <AnimateHeight
                         duration={500}
                         height={this.state.height}
                     >
                         <div className="result-post__links">
                             {this.renderLinks()}
                         </div>
-                    </Animateheight>
+                    </AnimateHeight>
                 </li>
             )
         }
+
     }
 }
-
 
 export default Post;
