@@ -13,21 +13,23 @@
             border: none;
             border-radius: 10px;
     
-            height: 60px;
-            font-size: 1.3em;
-            width: 500px;
+            height: 70px;
+            font-size: 40px;
+            width: 900px;
     
-            transition: all .2s ease-in-out;
+            transition: all .2s ease;
     
             &::placeholder {
                 color: $color-gray-one;
+                font-family: 'Font Awesome\ 5 Free', 'Lato', Arial, Helvetica, sans-serif;
+                font-weight: 600;
             }
+
     
             &:focus {
                 outline: none;
                 box-shadow: 2px 3px 20px 1px rgba(0, 0, 0, 0.4)
             }  
-            
             
         }
     
