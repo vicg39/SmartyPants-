@@ -9,12 +9,13 @@ export function fetchRecentPosts() {
     return function(dispatch) {
         axios.get('https://api.dailysmarty.com/posts')
             .then(response => {
-                
                 dispatch({
                     type: SET_RECENT_POSTS,
                     payload: response.data.posts
                 })
-            })
+            }).catch((error) => {
+                console.log("error", error);
+              });
     }
 }
 
@@ -27,6 +28,8 @@ export function fetchPostsWithQuery(query, callback) {
                     payload: response.data.posts
                 })
                 if(callback) { callback() }
-            })
+            }).catch((error) => {
+                console.log("error", error);
+              });
     }
 }
